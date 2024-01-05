@@ -1,0 +1,17 @@
+You are given a 0-indexed array nums consisting of positive integers.
+
+There are two types of operations that you can apply on the array any number of times:
+
+Choose two elements with equal values and delete them from the array.
+Choose three elements with equal values and delete them from the array.
+Return the minimum number of operations required to make the array empty, or -1 if it is not possible.
+
+
+Runtime
+Details
+569ms
+Beats 90.12%of users with Python3
+Memory
+Details
+31.50MB
+Beats 24.38%of users with Python3
