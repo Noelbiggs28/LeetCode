@@ -6,3 +6,12 @@ The number of rows in the 2D array should be minimal.
 Return the resulting array. If there are multiple answers, return any of them.
 
 Note that the 2D array can have a different number of elements on each row.
+
+Runtime
+Details
+49ms
+Beats 94.51%of users with Python3
+Memory
+Details
+17.32MB
+Beats 51.02%of users with Python3

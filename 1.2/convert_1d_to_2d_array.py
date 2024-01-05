@@ -1,23 +1,19 @@
-import unittest
-from convert_1d_to_2d_array import Solution
-
-class TestQueue(unittest.TestCase):
-
-    def setUp(self):
-        self.solution = Solution()
-
-    def test_ex1(self):
-        x = self.solution.findContentChildren([1,2,3],[1,1])
-        self.assertEqual(x, 1 )
-
-    def test_ex2(self):
-        x = self.solution.findContentChildren([1,2],[1,2,3])
-        self.assertEqual(x,2)
-
-    def test_ex3(self):
-        x = self.solution.findContentChildren([1,2,3],[])
-        self.assertEqual(x,0)
+class Solution:
+    def findMatrix(self, nums):
+        num_count = {}
+        for number in nums:
+            if number in num_count:
+                num_count[number]+=1
+            else:
+                num_count[number] = 1
+        max_count = max(num_count.values())
+        answer = []
+        for round in range(max_count):
+            inner_list = []
+            for index in num_count:
+                if num_count[index] !=0:
+                    inner_list.append(index)
+                    num_count[index] -=1
+            answer.append(inner_list)
+        return answer
     
-if __name__ == '__main__':
-    unittest.main() 
-    # ls assign_cookies.py | entr -s "python3 -m unittest cookie_spec.py"
