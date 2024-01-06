@@ -21,4 +21,4 @@ class TestQueue(unittest.TestCase):
     
 if __name__ == '__main__':
     unittest.main() 
-    # ls longest_sub.py | entr -s "python3 -m unittest longest_sub_spec.py"
+    # ls *.py | entr sh -c "python3 -m unittest *spec.py"
