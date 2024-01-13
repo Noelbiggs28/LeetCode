@@ -16,11 +16,7 @@ class Solution:
                     dictionary[letter]-=1
                 except:
                     extra_letters.append(letter)
-            print(dictionary)
-            print(extra_letters)
-          
             positive = 0
-            
             for value in dictionary.values():
                 if value == 0:
                     continue
@@ -30,14 +26,11 @@ class Solution:
                 else:
                     positive+=1
             amount_extra_letter = len(extra_letters)
-            print(positive)
             if amount_extra_letter >= positive:
                 return amount_extra_letter
-            answer = ((positive )/2 - (positive)%2 + amount_extra_letter)
+            answer = (positive /2 + amount_extra_letter)
             return answer
-
         number_of_changes = sub_dict(s_dict, t)
-        
         return int(number_of_changes)
 
 
