@@ -10,27 +10,23 @@ class Solution:
             return temp_dict
         s_dict = make_dict(s)
         def sub_dict(dictionary, string):
-            extra_letters = []
+            extra_letters = 0
             for letter in string:
                 try:
                     dictionary[letter]-=1
                 except:
-                    extra_letters.append(letter)
+                    extra_letters +=1
             positive = 0
             for value in dictionary.values():
                 if value == 0:
                     continue
                 elif value <= 0:
-                    for _ in range(value*-1):
-                        extra_letters.append("a")
+                    extra_letters += (value*-1)
                 else:
                     positive+=1
-            amount_extra_letter = len(extra_letters)
-            if amount_extra_letter >= positive:
-                return amount_extra_letter
-            answer = (positive /2 + amount_extra_letter)
+            if extra_letters >= positive:
+                return extra_letters
+            answer = (positive /2 + extra_letters)
             return answer
         number_of_changes = sub_dict(s_dict, t)
         return int(number_of_changes)
-
-
