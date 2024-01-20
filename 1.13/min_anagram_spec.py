@@ -26,8 +26,5 @@ class TestQueue(unittest.TestCase):
         x = self.solution.minSteps("gctcxyuluxjuxnsvmomavutrrfb", "qijrjrhqqjxjtprybrzpyfyqtzf")
         self.assertEqual(x,18)
 
-
-
-    
 if __name__ == '__main__':
     unittest.main() 
